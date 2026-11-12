@@ -1,0 +1,16 @@
+{
+  "name": "healtence-tracking",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Shopify App Proxy backend for healtence.com/apps/track (Cainiao tracking)",
+  "type": "module",
+  "engines": {
+    "node": "22.x"
+  },
+  "scripts": {
+    "dev": "vercel dev",
+    "deploy": "vercel --prod",
+    "sign-url": "node scripts/sign-url.mjs",
+    "test": "node scripts/self-test.mjs"
+  }
+}

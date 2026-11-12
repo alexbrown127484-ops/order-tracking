@@ -1,0 +1,14 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "regions": ["hkg1"],
+  "functions": {
+    "api/track.js": { "maxDuration": 15 },
+    "api/admin/status.js": { "maxDuration": 30 },
+    "api/admin/orders.js": { "maxDuration": 20 },
+    "api/webhooks/*.js": { "maxDuration": 10 }
+  },
+  "rewrites": [
+    { "source": "/api/track/(.*)", "destination": "/api/track" },
+    { "source": "/", "destination": "/api/admin/app" }
+  ]
+}
